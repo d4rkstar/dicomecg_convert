@@ -42,6 +42,8 @@ import requests
 from . import i18n
 import re
 from datetime import datetime
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pylab as plt
 from scipy.signal import butter, lfilter
 
@@ -315,10 +317,10 @@ class ECG(object):
                     which=which,
                     axis=axe,
                     color=color[which],
-                    bottom='off',
-                    top='off',
-                    left='off',
-                    right='off'
+                    bottom=False,
+                    top=False,
+                    left=False,
+                    right=False
                 )
 
         self.axis.set_xticklabels([])

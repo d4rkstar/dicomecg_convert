@@ -33,5 +33,5 @@ nosetests.xml
 
 .*
 include/
-local/
+local/*
 man/
